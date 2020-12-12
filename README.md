@@ -1,4 +1,4 @@
-# FANCY KANBAN
+# FANCY E - Commerce
 
 ## Link Deploy:
 ### Server
