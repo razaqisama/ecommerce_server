@@ -2,9 +2,9 @@
 
 ## Link Deploy:
 ### Server
-  Belum
+    https://fancyecome.herokuapp.com/
 ### Client
-  Belum
+    https://fanceyecome.web.app/
 ## REST API DOCUMENTATION
 
 ## Open Endpoints
