@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "dev": "nodemon server.js",
     "test": "jest --detectOpenHandles"
   },
   "repository": {
