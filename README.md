@@ -12,6 +12,7 @@
 Open endpoints require no Authentication.
 
 * [Login](./APIDocs/user/login.md) : `POST /login`
+* [Show Product List](./APIDocs/product/GetProduct.md) : `GET /product/`
 
 ## Closed Endpoints
 
@@ -23,10 +24,18 @@ Every endpoints below require a valid Token to get an access:
 Note: 
 * ( * ) Sign: Could Be Accessible By Any User Logged In
 * ( + ) Sign: Could Be Accessible If User Logged In Role is an Admin. 
+* ( ^ ) Sign: Could Be Accessible If User Logged In Role is an Customer. 
 
 ## Product Related
 
-* [*Show Product List](./APIDocs/product/GetProduct.md) : `GET /product/`
 * [+Add New Product](./APIDocs/product/AddProduct.md) : `POST /product/`
 * [+Edit Product](./APIDocs/product/EditProduct.md) : `PUT /product/:id/`
 * [+Remove Product](./APIDocs/product/RemoveProduct.md) : `DELETE /product/:id/`
+
+## Cart Related
+
+* [^Get Cart List](./APIDocs/cart/CartList.md) : `GET /cart/`
+* [^Get Checkout History](./APIDocs/cart/History.md) : `GET /cart/history`
+* [^Add New Cart](./APIDocs/cart/AddCart.md) : `PATCH /cart`
+* [^Edit Cart](./APIDocs/cart/EditCart.md) : `PATCH /cart/:id`
+* [^Remove Cart](./APIDocs/cart/RemoveCart.md) : `DELETE /cart/:id`

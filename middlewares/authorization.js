@@ -1,6 +1,5 @@
 const {User} = require('../models');
 
-
 async function authorization (req, res, next){
     const id = req.loggedIn.id;
     try {

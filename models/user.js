@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      User.hasMany(models.Cart);
     }
   };
   User.init({
@@ -32,9 +33,19 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Email Required'
         }
       }
-    
     },
-    password: DataTypes.STRING,
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: 'Password Required'
+        },
+        notEmpty: {
+          msg: 'Password Required'
+        }
+      }
+    },
     role: DataTypes.STRING
   }, {
     hooks: {

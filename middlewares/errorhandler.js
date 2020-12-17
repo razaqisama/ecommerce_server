@@ -3,6 +3,14 @@ function errorHandler(err, req, res, next){
     if(err.status === 400){
       if(err.message === 'Email / Password Incorrect'){
         res.status(err.status).json({message: err.message})
+      } else if (err.message === 'Out of stock' || err.message === 'Quantity exceeds inventory stock limit') {
+        res.status(err.status).json({message: err.message})
+      }else if (err.error[0]) {
+        let validationError = []
+        for(let i = 0; i < err.error.length; i++){
+          validationError.push(err.error[i].message)
+        }
+        res.status(err.status).json({message: err.message, error: validationError})
       } else {
         let validationError = []
         for(let i = 0; i < err.errorValidation.length; i++){

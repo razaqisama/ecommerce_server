@@ -6,7 +6,7 @@ Used to show all Product Data.
 
 **Method** : `GET`
 
-**Auth required** : YES
+**Auth required** : No
 
 **Permission required** : NO
 
